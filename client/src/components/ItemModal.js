@@ -53,11 +53,16 @@ class ItemModal extends Component {
           Add Task
         </Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
-          <ModalHeader toggle={this.toggle}> Add a Task to do,</ModalHeader>
+          <ModalHeader
+            style={{ backgroundColor: "skyblue" }}
+            toggle={this.toggle}
+          >
+            {" "}
+            Name a task you'd like to complete soon
+          </ModalHeader>
           <ModalBody>
             <Form onSubmit={this.onSubmit}>
               <FormGroup>
-                <Label for="item">Item</Label>
                 <Input
                   type="text"
                   name="name"
@@ -65,7 +70,11 @@ class ItemModal extends Component {
                   placeholder="start here"
                   onChange={this.onChange}
                 />
-                <Button color="dark" stye={{ marginTop: "2rem" }} block>
+                <Button
+                  color="dark"
+                  style={{ margin: "auto", width: "200px", marginTop: "2rem" }}
+                  block
+                >
                   Add
                 </Button>
               </FormGroup>
