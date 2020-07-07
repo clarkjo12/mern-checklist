@@ -25,7 +25,7 @@ class AppNavbar extends Component {
         <Navbar color="faded" expand="sm" className="mb-5" light>
           <Container>
             <NavbarBrand href="/">
-              <h1>Current Task List</h1>
+              <h1>List of Tasks</h1>
             </NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
