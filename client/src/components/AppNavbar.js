@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Progress from "../components/ProgressBar";
 import {
   Collapse,
   Navbar,
@@ -7,8 +9,7 @@ import {
   Nav,
   NavItem,
   NavLink,
-  Container,
-  Progress
+  Container
 } from "reactstrap";
 
 class AppNavbar extends Component {
@@ -23,10 +24,13 @@ class AppNavbar extends Component {
   render() {
     return (
       <div>
+        <Progress />
         <Navbar
-          style={{ backgroundColor: "#f3f33e" }}
+          style={{
+            backgroundImage: "linear-gradient(-90deg, #FBFF7B, #FAFF56)",
+            marginBottom: "20px"
+          }}
           expand="sm"
-          className="mb-5"
           light
         >
           <Container>
@@ -34,7 +38,7 @@ class AppNavbar extends Component {
               <h1
                 style={{
                   marginLeft: "20px",
-                  fontSize: "5vw",
+                  fontSize: "6vw",
                   fontFamily: "sansserif",
                   fontStyle: "oblique",
                   fontWeight: "500",
@@ -52,14 +56,8 @@ class AppNavbar extends Component {
                 </NavItem>
               </Nav>
             </Collapse>
-          </Container>{" "}
+          </Container>
         </Navbar>
-        <Progress
-          className="progress-bar"
-          animated
-          color="caution"
-          value="100"
-        />
       </div>
     );
   }
